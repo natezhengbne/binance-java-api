@@ -17,12 +17,14 @@ public class MarketDataStreamExample {
     BinanceApiWebSocketClient client = BinanceApiClientFactory.newInstance().newWebSocketClient();
 
     // Listen for aggregated trade events for ETH/BTC
-    client.onAggTradeEvent("ethbtc", response -> System.out.println(response));
+//    client.onAggTradeEvent("ethbtc", response -> System.out.println(response));
+
+    client.onUserTradeEvent("ethusdt", response -> System.out.println(response));
 
     // Listen for changes in the order book in ETH/BTC
-    client.onDepthEvent("ethbtc", response -> System.out.println(response));
-
-    // Obtain 1m candlesticks in real-time for ETH/BTC
-    client.onCandlestickEvent("ethbtc", CandlestickInterval.ONE_MINUTE, response -> System.out.println(response));
+//    client.onDepthEvent("ethbtc", response -> System.out.println(response));
+//
+//    // Obtain 1m candlesticks in real-time for ETH/BTC
+//    client.onCandlestickEvent("ethbtc", CandlestickInterval.ONE_MINUTE, response -> System.out.println(response));
   }
 }

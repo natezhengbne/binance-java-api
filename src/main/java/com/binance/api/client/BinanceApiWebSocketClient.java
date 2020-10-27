@@ -58,6 +58,8 @@ public interface BinanceApiWebSocketClient extends Closeable {
      */
     Closeable onAllMarketTickersEvent(BinanceApiCallback<List<AllMarketTickersEvent>> callback);
 
+    Closeable onSymbolMarketTickersEvent(String symbol,BinanceApiCallback<SymbolMarketTickersEvent> callback);
+
 
 
     /**

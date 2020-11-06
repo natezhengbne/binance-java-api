@@ -24,7 +24,7 @@ public class BinanceApiWebSocketListener<T> extends WebSocketListener {
 
   private boolean closing = false;
 
-  public BinanceApiWebSocketListener(BinanceApiCallback<T> callback, Class<T> eventClass) {
+  public    BinanceApiWebSocketListener(BinanceApiCallback<T> callback, Class<T> eventClass) {
     this.callback = callback;
     this.objectReader = mapper.readerFor(eventClass);
   }

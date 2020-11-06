@@ -14,12 +14,12 @@ public class BinanceApiClientFactory {
   /**
    * API Key
    */
-  private String apiKey;
+  private String apiKey="uPK6Mkd74ux6mw8TlcrEQY14vNI0YE92vZMvpgvPhlAIx0qO9rmAlqmhC6o4VzMT";
 
   /**
    * Secret.
    */
-  private String secret;
+  private String secret="CvZ4b26yjIdR9KYBv0fMti0mfClywzgqOKe1bh2efchNc6V72mvlz6n7ffHYoUTH";
 
   /**
    * Instantiates a new binance api client factory.
@@ -50,7 +50,13 @@ public class BinanceApiClientFactory {
    * @return the binance api client factory
    */
   public static BinanceApiClientFactory newInstance() {
-    return new BinanceApiClientFactory(null, null);
+    String apiKey="uPK6Mkd74ux6mw8TlcrEQY14vNI0YE92vZMvpgvPhlAIx0qO9rmAlqmhC6o4VzMT";
+
+    /**
+     * Secret.
+     */
+    String secret="CvZ4b26yjIdR9KYBv0fMti0mfClywzgqOKe1bh2efchNc6V72mvlz6n7ffHYoUTH";
+    return new BinanceApiClientFactory(apiKey, secret);
   }
 
   /**
